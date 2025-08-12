@@ -5,9 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
   <title>Keith's Pick Calculator</title>
+
+  <!-- Manifest and theme color -->
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#3367D6" />
+
   <style>
+    /* Your existing styles here */
     :root {
       --blue-900: #0b3d91;
       --blue-600: #1976d2;
@@ -170,10 +174,6 @@
       }
     }
   </style>
-
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#3367D6" />
-
 </head>
 
 <body>
@@ -206,11 +206,6 @@
   </div>
 
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('Service Worker registered'))
-        .catch(err => console.log('Service Worker registration failed:', err));
-    }
     const unitsNeeded = document.getElementById('unitsNeeded');
     const unitsPerBox = document.getElementById('unitsPerBox');
     const unitsPerPack = document.getElementById('unitsPerPack');
@@ -291,15 +286,4 @@
     unitsPerPack.addEventListener('keydown', (e) => { if (e.key === 'Enter') { calculateBtn.click(); } });
   </script>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(() => {
-          console.log('Service Worker registration failed');
-        });
-      });
-    }
-  </script>
-</body>
-
-</html>
+  <!-- Servic
