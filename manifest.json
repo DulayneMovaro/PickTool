@@ -1,6 +1,6 @@
 {
-  "name": "My Awesome App",
-  "short_name": "AwesomeApp",
+  "name": "Keith's Pick Tool",
+  "short_name": "KPT",
   "start_url": "./PickTool.html",
   "display": "standalone",
   "background_color": "#ffffff",
