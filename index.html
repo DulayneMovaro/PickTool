@@ -206,6 +206,15 @@
   </div>
 
   <script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (let registration of registrations) {
+      registration.unregister().then(() => {
+        console.log('Service Worker unregistered');
+      });
+    }
+  });
+}
     const unitsNeeded = document.getElementById('unitsNeeded');
     const unitsPerBox = document.getElementById('unitsPerBox');
     const unitsPerPack = document.getElementById('unitsPerPack');
